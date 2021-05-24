@@ -3,6 +3,7 @@ Here's a guide on how this website is constituted.
 
 Link to the website : https://exhibitionio.herokuapp.com/
 <h4>!!IMPORTANT : Don't scroll using keyboard up and down keys in the website.</h4>
+<h5>Time to complete the website : 120 hrs</h5>
 <h3> Main Page : </h3>
 
 <p>Sources % Technologies used:</p>
@@ -33,7 +34,7 @@ Link to the website : https://exhibitionio.herokuapp.com/
 <li>This is basic usage of matter js and matter attractors js plugin (sources given above)</li>
 <li>The plugin still offers some freedom on the shape,size and colour of the matter created.</li>
 <li>Basic syntax for matter attractors body which will attract other matters :</li>
-<img src="" >
+<img src="matter.png" >
 <li>Refer the documentation for better understanding.</li>
 
 
