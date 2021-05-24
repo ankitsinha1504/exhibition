@@ -1,0 +1,461 @@
+{% extends 'base.html' %}
+{% block title %}art gallery{% endblock title %}
+
+{% block css_links %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/art.css')}}">
+{% endblock css_links %}
+
+{% block body %}
+  <div class="wrapper">
+
+    <nav class="navbar">
+      <div class="menu">
+         <a href="#" class="">art gallery.io</a> 
+      </div>
+
+      <div class="logo"></div>
+
+      <div class="links">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/cars">Cars</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="bg-text">
+      <h1>artioartio</h1>
+    </div>
+
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 paint">
+                <div class="example">
+                    <div class="block">
+                      <div class="side -main a" ></div>
+                      <div class="side -left a"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main a" ></div>
+                      <div class="side -left a"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main a"></div>
+                      <div class="side -left a"></div>
+                    </div>
+                  </div>       
+                     <!--   <img src="{{url_for('static', filename='paintings/mona_lisa.jpg')}}" class='paint-img'>    -->
+              
+              </div>
+              <div class="col-lg-6 col-sm-12 paint_abt">
+                  <h1 class="paint-head">Mona Lisa</h1>
+                  <h5 class='artist'>- Leonardo Da Vinci , 1519</h5>
+                  <p class="paint-text">
+                    <ul>
+                      <li>• The name of that lady is Lisa del Giocondo, the wife of Francesco del Giocondo.</l1>
+                      <li>• This painting is painted as an oil painting on wood.</li>
+                      <li>• It became famous when it was stolen in summer 1911.</li>
+                  </p>
+
+              </div>
+
+            </div>
+          
+          </div>
+        </div>
+
+
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 paint">
+                <div class="example">
+                    <div class="block">
+                      <div class="side -main b"></div>
+                      <div class="side -left b"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main b"></div>
+                      <div class="side -left b"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main b"></div>
+                      <div class="side -left b"></div>
+                    </div>
+                  </div>       
+                     <!--   <img src="{{url_for('static', filename='paintings/mona_lisa.jpg')}}" class='paint-img'>    -->
+              
+              </div>
+              <div class="col-lg-6 col-sm-12 paint_abt">
+                  <h1 class="paint-head">The Starry Night</h1>
+                  <h5 class='artist'>- Vincent Van Gogh , 1889</h5>
+                  <p class="paint-text">
+                    <ul>
+                      <li>• It represents the view from his room just before the sunrise with the addition of the village of Saint-Remy-de-Provence.</l1>
+                      <li>• Since 1941, it has been in the collection of the Museum of Modern Art in New York City.</li>
+                  </p>
+
+              </div>
+
+            </div>
+          
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 paint">
+                <div class="example">
+                    <div class="block">
+                      <div class="side -main c"></div>
+                      <div class="side -left c"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main c"></div>
+                      <div class="side -left c"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main c"></div>
+                      <div class="side -left c"></div>
+                    </div>
+                  </div>       
+                     <!--   <img src="{{url_for('static', filename='paintings/mona_lisa.jpg')}}" class='paint-img'>    -->
+              
+              </div>
+              <div class="col-lg-6 col-sm-12 paint_abt">
+                  <h1 class="paint-head">The Harvesters</h1>
+                  <h5 class='artist'>- Pieter Bruegel the Elder , 1565</h5>
+                  <p class="paint-text">
+                    <ul>
+                      <li>• It was extraordinary for a time when landscapes served mostly as backdrops for religious paintings.</l1>
+                      <li>• A group of peasants on the left cut and bundle ripened wheat, while the on the right, another group takes their midday meal.</li>
+                  </p>
+
+              </div>
+
+            </div>
+          
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 paint">
+                <div class="example">
+                    <div class="block">
+                      <div class="side -main d"></div>
+                      <div class="side -left d"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main d"></div>
+                      <div class="side -left d"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main d"></div>
+                      <div class="side -left d"></div>
+                    </div>
+                  </div>       
+                     <!--   <img src="{{url_for('static', filename='paintings/mona_lisa.jpg')}}" class='paint-img'>    -->
+              
+              </div>
+              <div class="col-lg-6 col-sm-12 paint_abt">
+                  <h1 class="paint-head">Irises</h1>
+                  <h5 class='artist'>- Vincent Van Gogh , 1889</h5>
+                  <p class="paint-text">
+                    <ul>
+                      <li>• He started this painting within one week when he was admitted to an asylum.</l1>
+                      <li>• He named this painting “The lightning conductor for my illness” because he felt that continuing painting keep himself secured from going insane.</li>
+                  </p>
+
+              </div>
+
+            </div>
+          
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 paint">
+                <div class="example">
+                    <div class="block">
+                      <div class="side -main e"></div>
+                      <div class="side -left e"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main e"></div>
+                      <div class="side -left e"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main e"></div>
+                      <div class="side -left e"></div>
+                    </div>
+                  </div>       
+                     <!--   <img src="{{url_for('static', filename='paintings/mona_lisa.jpg')}}" class='paint-img'>    -->
+              
+              </div>
+              <div class="col-lg-6 col-sm-12 paint_abt">
+                  <h1 class="paint-head">Lady With An Ermine</h1>
+                  <h5 class='artist'>- Leonardo Da Vinci , 1491</h5>
+                  <p class="paint-text">
+                    <ul>
+                      <li>• The name of that lady in the painting is Cecilia Gallerani who was the mistress of Ludovico Sforza, Duke of Milan at that time.</l1>
+                      <li>• It is an Oil Painting on Walnut board.</li>
+                      <li>• One of Poland’s national treasures.</li>
+                  </p>
+
+              </div>
+
+            </div>
+          
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 paint">
+                <div class="example">
+                    <div class="block">
+                      <div class="side -main f"></div>
+                      <div class="side -left f"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main f"></div>
+                      <div class="side -left f"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main f"></div>
+                      <div class="side -left f"></div>
+                    </div>
+                  </div>       
+                     <!--   <img src="{{url_for('static', filename='paintings/mona_lisa.jpg')}}" class='paint-img'>    -->
+              
+              </div>
+              <div class="col-lg-6 col-sm-12 paint_abt">
+                  <h1 class="paint-head">Napoleon Crossing the Alps</h1>
+                  <h5 class='artist'>- Jacques-Louis David , 1805</h5>
+                  <p class="paint-text">
+                    <ul>
+                      <li>• It was inspired by Napoleon's victory at the Battle of Marengo.</l1>
+                      <li>• Napolean refused to sit for the portrait.</li>
+                      <li>• Napolean liked the painting so much that he wanted David to make this exact composition three more times.</li>
+                  </p>
+
+              </div>
+
+            </div>
+          
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 paint">
+                <div class="example">
+                    <div class="block">
+                      <div class="side -main g"></div>
+                      <div class="side -left g"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main g"></div>
+                      <div class="side -left g"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main g"></div>
+                      <div class="side -left g"></div>
+                    </div>
+                  </div>       
+                     <!--   <img src="{{url_for('static', filename='paintings/mona_lisa.jpg')}}" class='paint-img'>    -->
+              
+              </div>
+              <div class="col-lg-6 col-sm-12 paint_abt">
+                  <h1 class="paint-head">The Storm On The Sea Of Galilee</h1>
+                  <h5 class='artist'>- Rembrandt , 1633</h5>
+                  <p class="paint-text">
+                    <ul>
+                      <li>• The paintings show the miracle of Jesus calming the storm on the Sea of Galilee.</l1>
+                      <li>• On March 18, 1990, thieved masked themselves as police officers and entered the museum and stole the paintings.</li>
+                      <li>• The museum still displays the empty frames in their original location.</li>
+                  </p>
+
+              </div>
+
+            </div>
+          
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 paint">
+                <div class="example">
+                    <div class="block">
+                      <div class="side -main h"></div>
+                      <div class="side -left h"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main h"></div>
+                      <div class="side -left h"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main h"></div>
+                      <div class="side -left h"></div>
+                    </div>
+                  </div>       
+                     <!--   <img src="{{url_for('static', filename='paintings/mona_lisa.jpg')}}" class='paint-img'>    -->
+              
+              </div>
+              <div class="col-lg-6 col-sm-12 paint_abt">
+                  <h1 class="paint-head">Guernica</h1>
+                  <h5 class='artist'>- Pablo Picasso , 1937</h5>
+                  <p class="paint-text">
+                    <ul>
+                      <li>This painting represents the suffering of people wrenched by violence and chaos.</l1>
+                      <li>The painting became popular and it helped to bring worldwide attention to Spanish warfare.</li>
+                      <li>Outstanding within the composition is a gored horse, a bull, and flames.</li>
+                  </p>
+
+              </div>
+
+            </div>
+          
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 paint">
+                <div class="example">
+                    <div class="block">
+                      <div class="side -main i"></div>
+                      <div class="side -left i"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main i"></div>
+                      <div class="side -left i"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main i"></div>
+                      <div class="side -left i"></div>
+                    </div>
+                  </div>       
+                     <!--   <img src="{{url_for('static', filename='paintings/mona_lisa.jpg')}}" class='paint-img'>    -->
+              
+              </div>
+              <div class="col-lg-6 col-sm-12 paint_abt">
+                  <h1 class="paint-head">Cafe Terrace at Night</h1>
+                  <h5 class='artist'>- Vincent Van Gogh, 1888</h5>
+                  <p class="paint-text">
+                    <ul>
+                      <li>• It is also known as The Cafe Terrace on the Place du Forum.</l1>
+                      <li>• The visitors to the cafe can stand at the north-eastern corner of the Place du Forum.</li>
+                      <li>• The cafe was refurbished in 1990-1991 to replicate Van Gogh’s painting.</li>
+                  </p>
+
+              </div>
+
+            </div>
+          
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 paint">
+                <div class="example">
+                    <div class="block">
+                      <div class="side -main j"></div>
+                      <div class="side -left j"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main j"></div>
+                      <div class="side -left j"></div>
+                    </div>
+                    <div class="block">
+                      <div class="side -main j"></div>
+                      <div class="side -left j"></div>
+                    </div>
+                  </div>       
+                     <!--   <img src="{{url_for('static', filename='paintings/mona_lisa.jpg')}}" class='paint-img'>    -->
+              
+              </div>
+              <div class="col-lg-6 col-sm-12 paint_abt">
+                  <h1 class="paint-head">Saturn Devouring His Son</h1>
+                  <h5 class='artist'>- Goya , 1823</h5>
+                  <p class="paint-text">
+                    <ul>
+                      <li>• It represents the Greek myth of the Titan Cronus who had fear of thrown by one of his children.</l1>
+                      <li>• He ate them one by one upon their birth.</li>
+                  </p>
+
+              </div>
+
+            </div>
+          
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <!-- swiper js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <!-- custom js -->
+  <script src="{{url_for('static', filename='js/art.js')}}"></script>
+
+
+{% endblock body %}

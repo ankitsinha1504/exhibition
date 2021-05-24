@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title%} {% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block css_links %} {% endblock %}
+    </head>
+    <body>
+        
+        {% block body%}
+        <model-viewer loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/sofa.gltf')}}" auto-rotate camera-controls></model-viewer>
+        {% endblock %}
+
+    </body>
+        
+</html>

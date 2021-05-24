@@ -1,0 +1,431 @@
+{% extends 'base.html' %}
+{% block title %}
+cars gallery
+{% endblock title %}  
+{% block css_links %}
+  <link href="https://fonts.cdnfonts.com/css/cocobiker" rel="stylesheet">  
+  <link href="https://fonts.cdnfonts.com/css/assiduous" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/cars.css')}}">
+
+{% endblock css_links %}
+
+{% block body %}
+  
+  <div class="wrapper">
+
+
+    <nav class="navbar">
+      <div class="menu">
+         <a href="#">auto expo.io</a> 
+      </div>
+
+      <div class="logo"></div>
+
+      <div class="links">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/art">Art</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="bg-text">
+      <h1>cariocario</h1>
+    </div>
+
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer disable-zoom shadow-intensity="1" shadow-softness="0" loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/ferrari_458/ferrari_458.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Ferrari 458 Italia</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Engine :<span>4497 cc</span></li>
+                      <li>Fuel :<span>Petrol</span></li>
+                      <li>Mileage :<span>7.51 kmpl</span></li>
+                      <li>Power :<span>561.9 bhp</span></li>
+                      <li>Transmission :<span>automatic</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer disable-zoom loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/lemborghini_aventador_j/lemborghiniAventadorJ.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Lamborghini Aventador J</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Engine :<span>6498 cc</span></li>
+                      <li>Fuel :<span>Petrol</span></li>
+                      <li>Mileage :<span>5-7 kmpl</span></li>
+                      <li>Power :<span>690 bhp</span></li>
+                      <li>Top Speed :<span>200 mph</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!--
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-text">
+            <h4><span></span></h4>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/lemborghini_terzo/lemborghini_terzo.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Ferrari 458 Italia</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Engine :<span>4497 cc</span></li>
+                      <li>Fuel :<span>Petrol</span></li>
+                      <li>Mileage :<span>7.51 kmpl</span></li>
+                      <li>Power :<span>561.9 bhp</span></li>
+                      <li>Transmission :<span>automatic</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-text">
+            <h4><span></span></h4>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/lamborghini_terzo_millennio/terzo_millenium.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Ferrari 458 Italia</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Engine :<span>4497 cc</span></li>
+                      <li>Fuel :<span>Petrol</span></li>
+                      <li>Mileage :<span>7.51 kmpl</span></li>
+                      <li>Power :<span>561.9 bhp</span></li>
+                      <li>Transmission :<span>automatic</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  -->
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer disable-zoom loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/mclaren_mp4-12c/mclaren_mp4.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Mclaren mp4-12c</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Engine :<span>3799 cc</span></li>
+                      <li>0 -60 mph :<span>2.9 sec</span></li>
+                      <li>Engine Type :<span>V8 twin turbo</span></li>
+                      <li>Power :<span>591 bhp</span></li>
+                      <li>Top Speed :<span>207 mph</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer disable-zoom shadow-intensity="1" shadow-softness="0" loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/bugatti_chiron/bugati_chiron.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Bugatti Chiron</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Engine :<span>7993 cc</span></li>
+                      <li>Fuel :<span>Petrol</span></li>
+                      <li>Mileage :<span>7.51 kmpl</span></li>
+                      <li>Power :<span>1479 bhp</span></li>
+                      <li>Top Speed :<span>420 kmph</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer disable-zoom loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/aston-martin_v12/scene.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Aston Martin v12</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Engine :<span>4497 cc</span></li>
+                      <li>Top Speed :<span>190 mph</span></li>
+                      <li>Mileage :<span>16-20 mpg</span></li>
+                      <li>Power :<span>510 bhp</span></li>
+                      <li>Transmission :<span>6 speed manual</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer disable-zoom loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/bmw_i8/scene.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">BMW i8</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Engine :<span>1499 cc</span></li>
+                      <li>Fuel :<span>Petrol</span></li>
+                      <li>Mileage :<span>47.45 kmpl</span></li>
+                      <li>Power :<span>228 bhp</span></li>
+                      <li>Top Speed :<span>155 mph</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer disable-zoom loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/tesla_cybertruck/scene.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Tesla Cybertruck</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Range :<span>250+ miles</span></li>
+                      <li>Fuel :<span>Electric</span></li>
+                      <li>Storage :<span>100 cu ft</span></li>
+                      <li>0-60 mph :<span>6.5 sec</span></li>
+                      <li>Transmission :<span>automatic</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer disable-zoom loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/nissan_gt-r/scene.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Nissan GT-R</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Engine :<span>3798 cc</span></li>
+                      <li>Fuel :<span>Petrol</span></li>
+                      <li>Mileage :<span>9 kmpl</span></li>
+                      <li>Power :<span>562.2 bhp</span></li>
+                      <li>Transmission :<span>automatic</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer disable-zoom loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/range_rover_sport/scene.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Range Rover Sport</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Engine :<span>2993 cc</span></li>
+                      <li>Fuel :<span>Diesel</span></li>
+                      <li>Mileage :<span>12.65 kmpl</span></li>
+                      <li>Power :<span>296 bhp</span></li>
+                      <li>Transmission :<span>automatic</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer disable-zoom loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/tesla_model_3/scene.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Tesla Model 3</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Range :<span>657 km</span></li>
+                      <li>Fuel :<span>Electric</span></li>
+                      <li>Top Speed :<span>162 mph</span></li>
+                      <li>0-100 kmph :<span>3.3 sec</span></li>
+                      <li>Cargo :<span>542 L</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="swiper-slide">
+          <div class="slide-number">
+            <p><span></span></p>
+          </div>
+          <div class="slide-img container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 model-div">
+                <model-viewer disable-zoom loading="eager" autoplay alt="a sofa" src="{{url_for('static', filename='assets/suzuki_carry_minivan/scene.gltf')}}" auto-rotate camera-controls class="model"></model-viewer>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 abt_model">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h1 class="card-title">Maruti Suzuki Omni</h1>
+                    <p class="card-text"></p>
+                    <ul class="specs">
+                      <li>Engine :<span>50000 cc</span></li>
+                      <li>Fuel :<span>LPG</span></li>
+                      <li>Mileage :<span>Limitless</span></li>
+                      <li>Seating Capacity :<span>2-3 families</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <!-- swiper js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script> 
+  <!-- custom js -->
+  <script src="{{url_for('static', filename='js/cars.js')}}"></script>
+
+{% endblock body %}
