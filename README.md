@@ -19,6 +19,7 @@ Link to the website : https://exhibitionio.herokuapp.com/
 <ul>Q.) How to create loading animation ?</ul>
 <li>With Tweenmax from GSAP it could be done by using to and from methods available</li>
 <li>To means where to end and from means where to begin the components to be animated</li> 
+<hr>
 <ul>Q.) How to create the SVG car animation ?</ul>
 <li>Step 1: Find the svg of desire. Source mentioned above (like : https://www.vectorstock.com/ )</li>
 <li>Step 2: Open the svgs inside adobe xd and align the svgs as desired</li>
@@ -29,7 +30,7 @@ Link to the website : https://exhibitionio.herokuapp.com/
 <img src="car_io_2.png" width="80%">
 <li>Step 5: For animation of car use GSAP and target the Translate X and Y properties. Use hit and trial method to find the perfect angle.</li>
 <li>Refer this tutorial on youtube for better understanding: https://youtu.be/goI6JHO99Qg</li>
-
+<hr>
 <ul>Q.) How to create section 3 (Art io) animation ?</ul>
 <li>This is basic usage of matter js and matter attractors js plugin (sources given above)</li>
 <li>The plugin still offers some freedom on the shape,size and colour of the matter created.</li>
@@ -37,7 +38,7 @@ Link to the website : https://exhibitionio.herokuapp.com/
 <img src="matter.png" >
 <li>Refer the documentation for better understanding.</li>
 
-
+<hr>
 <h2>CARS iO PAGE</h2>
 <h4><ul>Q.) How to add 3d model ?</ul></h4>
 <li>Step 1: Find a free 3d model. Source to find : https://sketchfab.com/</li>
