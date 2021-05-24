@@ -1,0 +1,244 @@
+
+@import url('https://fonts.cdnfonts.com/css/vitreous');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: rgb(24, 23, 23);
+  color: #fff;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 30px;
+  transform: translateY(-15px);
+}
+
+.navbar .links li {
+  display: inline-block;
+  padding-left: 30px;
+
+}
+
+.navbar .links li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  /* border: 2px solid #fff; */
+  /* padding: 10px 3px 0 3px; */
+}
+
+.navbar .menu a {
+  font-weight: 600;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+a:visited {
+  color: inherit;
+}
+
+/* bg text */
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: .3;
+                                 
+                                          
+}
+
+.bg-text h1 {
+  font-size: 500px;
+  text-align: center;
+  color: transparent;
+  animation: bg_outline 5s linear infinite;
+  animation-delay: 1s;
+  animation-direction: alternate;
+  text-transform: uppercase;
+  font-family: 'Vitreous', sans-serif;  
+}
+
+@keyframes bg_outline {
+  from { -webkit-text-stroke: 3px rgb(255, 255, 255); }
+  to { -webkit-text-stroke: 3px rgb(0, 0, 0)}
+}
+
+/* slider */
+.swiper-container {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px 0;
+}
+
+.swiper-wrapper {
+  transition-delay: .5s;
+}
+
+.swiper-slide {
+  width: 47em;
+  height: 28em;
+  
+}
+
+.swiper-slide .slide-img {
+  background: inherit;
+  border: 3px solid white;
+}
+
+.slide-img {
+  backdrop-filter: blur( 7px );
+  background-position: 50%;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+ .slide-img::after {
+  /* content: ''; */
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 1s ease-in-out;
+} 
+
+.slide-img:hover::after {
+  opacity: .5;
+}
+
+.slide-number {
+  position: absolute;
+  top: -35px;
+  right: 0;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.slide-number p {
+  font-size: 60px;
+  font-family: "assc";
+  color: #ffffff;
+  position: relative;
+}
+
+.slide-number p span {
+  position: absolute;
+}
+
+.slide-text {
+  position: absolute;
+  bottom: -70px;
+  left: 50px;
+  z-index: 1;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.slide-text h4 {
+  color: #fff;
+  font-size: 60px;
+  font-family: "assc";
+  position: relative;
+}
+
+.slide-text h4 span {
+  position: absolute;
+}
+
+
+/* Content */
+
+
+
+/* model viewer */
+.model {
+  width: 23em;
+  height: 25em;
+  margin: 0 auto;
+}
+
+.abt_model {
+  margin: auto;
+}
+.abt_model .card {
+  width: 18rem;
+  color : black;
+  /* background-color: rgb(218, 163, 163); */
+  background: inherit;
+  backdrop-filter: blur( 7px );
+  border: solid 1px white;
+  /* filter: blur(5px); */
+
+}
+
+.abt_model .card .card-title {
+  color : #fff;
+  font-family: 'Assiduous', sans-serif;
+}
+.abt_model .card .specs {
+  color: rgb(104, 88, 80);
+  padding :0;
+}
+.abt_model .card .specs span{
+    margin-left: 1rem;
+    color: #fff;
+}
+
+
+/* media query */
+
+@media screen and (max-width: 990px){
+  .swiper-slide {
+    width:300px;
+    height:500px;
+  }
+  .bg-text{
+    display: none;
+  }
+  .model {
+    width:15em;
+    height:15em;
+  }
+  .card {
+    max-width: 16rem;
+  }
+  .navbar{
+    transform: translateY(0);
+  }
+  .navbar .links li a {
+    padding: 0;
+  }
+
+}
+@media screen and (max-width:356px) {
+  .menu{
+    display: none;
+  }
+}

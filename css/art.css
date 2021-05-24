@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+:root {
+  --back: #00203FFF;
+  --container: #ADEFD1FF;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: var(--back);
+  color: #fff;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 30px;
+  
+  
+}
+.logo,
+.menu {
+  font-family: 'Pattaya', sans-serif;
+}
+.navbar .links li {
+  display: inline-block;
+  padding-left: 30px;
+}
+
+.navbar .links li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar .menu a {
+  font-weight: 600;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+a:visited {
+  color: inherit;
+}
+
+/* bg text */
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: .3;
+}
+
+.bg-text h1 {
+  font-family: "assc";
+  font-size: 500px;
+  text-align: center;
+  color: transparent;
+  animation: bg_outline 7s linear infinite;
+  animation-direction: alternate; 
+  text-transform: uppercase;
+}
+
+@keyframes bg_outline {
+  from { -webkit-text-stroke: 3px rgb(4, 61, 23); }
+  to { -webkit-text-stroke: 3px rgb(255, 255, 255)}
+}
+
+
+/* slider */
+.swiper-container {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px 0;
+}
+
+.swiper-wrapper {
+  transition-delay: .5s;
+}
+
+.swiper-slide {
+  width: 47em;
+  height: 28em;
+}
+
+.swiper-slide .slide-img {
+  background: var(--container);
+  box-shadow: 0 20px 20px rgba(173, 239, 209 , 0.2) , 0 0 50px rgba(173, 239, 209 , 0.2);
+}
+
+.slide-img {
+  background-position: 50%;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-img::after {
+  /* content: ''; */
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 1s ease-in-out;
+}
+
+.slide-img:hover::after {
+  opacity: .5;
+}
+
+.slide-number {
+  position: absolute;
+  top: -35px;
+  right: 0;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.slide-number p {
+  font-size: 60px;
+  font-family: "assc";
+  color: #ecbb1b;
+  position: relative;
+}
+
+.slide-number p span {
+  position: absolute;
+}
+
+.slide-text {
+  position: absolute;
+  bottom: -70px;
+  left: 50px;
+  z-index: 1;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.slide-text h4 {
+  color: #fff;
+  font-size: 60px;
+  font-family: "assc";
+  position: relative;
+}
+
+.slide-text h4 span {
+  position: absolute;
+}
+
+
+/* content */
+.row {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  transform-style: preserve-3d;
+  padding: 20px;
+  
+}
+.container {
+  padding: 0;
+}
+.paint {
+  padding:0;
+  text-align: right;
+  box-shadow: 0 20px 20px rgba(101, 204, 157, 0.2) , 0 0 50px rgba(101, 204, 157, 0.2);
+}
+
+.paint-img {
+  background-position: 50%;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.75s ease;
+}
+.paint_abt {
+  color: #737171;
+}
+.paint-head {
+  font-family: 'Pattaya', sans-serif;
+  padding-left: 32px;
+  color: #11375b;
+  transition: all 0.75s ease;
+}
+.paint-text{
+  transition: all 0.75s ease;
+}
+
+.artist {
+  text-align: right;
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .swiper-slide {
+    width:300px;
+    height:500px;
+  }
+  .bg-text{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+/* making image as 3d */
+.example {
+  position: relative;
+  width: 100%;
+  padding-top: 50%;
+  margin: 2rem auto;
+}
+.example > .block {
+  position: absolute;
+  height: 140%;
+  width: 30%;
+  perspective: 1000px;
+}
+.example > .block:nth-of-type(1) {
+  height: 100%;
+  top: 10%;
+  left: 17%;
+  width: 15%;
+}
+.example > .block:nth-of-type(2) {
+  top: 0;
+  left: 35%;
+}
+.example > .block:nth-of-type(3) {
+  height: 100%;
+  top: 10%;
+  left: 64%;
+  width: 15%;
+}
+.example > .block > .side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-image: url('../paintings/mona_lisa.jpg'); */
+  background-size: auto 100%;
+  box-shadow: -1vw 0.5vw 1vw rgba(0, 0, 0, 0.3);
+}
+
+.example > .block > .side.-main {
+  height: 100%;
+  width: 100%;
+  transform: rotateY(30deg);
+  transform-origin: 0 50%;
+}
+.example > .block > .side.-left {
+  height: 100%;
+  width: 20%;
+  transform-origin: 0 50%;
+  transform: rotateY(-60deg) translateX(-100%);
+  filter: brightness(40%);
+}
+.example > .block:nth-of-type(1) > .side.-main {
+  background-position: 4% 50%;
+  background-size: auto 130%;
+}
+.example > .block:nth-of-type(1) > .side.-left {
+  background-position: 0 50%;
+  background-size: auto 130%;
+}
+.example > .block:nth-of-type(2) > .side.-main {
+  background-position: 50% 0;
+}
+.example > .block:nth-of-type(2) > .side.-left {
+  background-position: 28.5% 0;
+}
+.example > .block:nth-of-type(3) > .side.-main {
+  background-position: 96% 50%;
+  background-size: auto 130%;
+}
+.example > .block:nth-of-type(3) > .side.-left {
+  background-position: 78% 50%;
+  background-size: auto 130%;
+}
+
+
+/* images */
+
+.example > .block > .a {
+  background-image: url('../paintings/mona_lisa.jpg');
+}
+.example > .block > .b {
+  background-image: url('../paintings/starry-night.jpg')
+}
+.example > .block > .c {
+  background-image: url('../paintings/the-harvesters-2.jpg')
+}
+.example > .block > .d {
+  background-image: url('../paintings/Irises.jpg')
+}
+.example > .block > .e {
+  background-image: url('../paintings/Lady-with-an-Ermine.jpg')
+}
+.example > .block > .f {
+  background-image: url('../paintings/Napolean_Crossing_The_Alps.jpg')
+}
+.example > .block > .g {
+  background-image: url('../paintings/The-Storm-On-The-Sea-Of-Galilee.jpg')
+}
+.example > .block > .h {
+  background-image: url('../paintings/guernica.jpg')
+}
+.example > .block > .i {
+  background-image: url('../paintings/Cafe-Terrace-at-Night.jpeg')
+}
+.example > .block > .j {
+  background-image: url('../paintings/Saturn-Devouring-His-Son.jpg')
+}
+
+
+
+
+@media screen and (max-width: 990px){
+  .swiper-slide {
+    width:300px;
+    height:500px;
+  }
+  .bg-text{
+    display: none;
+  }
+  .paint_abt {
+    color: transparent;
+    margin-top: 50px;
+  }
+  .artist {
+    color: #737171;
+  }
+}
